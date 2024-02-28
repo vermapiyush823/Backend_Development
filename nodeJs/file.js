@@ -1,17 +1,16 @@
-const fs = require('fs');
+// const fs = require('fs');
 
-// Synchronous
+// // Synchronous
 // fs.writeFileSync("./test.txt","Hello sync");
 
-// Asynchronous
+// // Asynchronous
 // fs.writeFile("./test.text","Hello async",(err)=>{});
 
-// Synchronous
+// // Synchronous
 // const res =  fs.readFileSync("./demo.text","utf-8");
 // console.log(res);
 
-
-// Asynchronous
+// // Asynchronous
 // fs.readFile("./demo.text","utf-8",(err,res)=>{
 //     if(err){
 //         console.log(`${err}`);
@@ -21,16 +20,15 @@ const fs = require('fs');
 //     }
 // })
 
-// Synchronous
+// // Synchronous
 // fs.appendFileSync("./text.txt",`${Date.now()} Hey There\n`);
 
 
-// Copy file
+// // Copy file
 // fs.copyFileSync("./text.txt","./copy.txt");
 
-// Delete File
+// // Delete File
 // fs.unlinkSync("./copy.txt");
 
-
-// Get details of File
-console.log(fs.statSync("./text.txt"));
+// // Get details of File
+// console.log(fs.statSync("./text.txt"));
