@@ -25,18 +25,32 @@ app.get('/api/users/:id',(req,res)=>{
     return res.json(user)
 })
 
-app.post('/api/users',(req,res)=>{
-    // Add new user
-    return res.json({status:'pending'});
-})
-app.patch('/api/users/:id',(req,res)=>{
+app.route('/api/users/:id').get((req,res)=>{
+    const id = Number(req.params.id);
+    const user = users.find((user)=>user.id===id);
+    return res.json(user)
+}).patch((req,res)=>{
     // Update user details
     return res.json({status:'pending'});
-})
-app.post('/api/users/:id',(req,res)=>{
+}).delete((req,res)=>{
     // Delete user 
     return res.json({status:'pending'});
 })
+
+app.post('/api/users',(req,res)=>{
+    // Add new user
+    const body = req.body;
+    return res.json({status:'pending'});
+})
+
+// app.patch('/api/users/:id',(req,res)=>{
+//     // Update user details
+//     return res.json({status:'pending'});
+// })
+// app.post('/api/users/:id',(req,res)=>{
+//     // Delete user 
+//     return res.json({status:'pending'});
+// })
 
 
 app.listen(PORT,()=>{console.log(`Server started on port : ${PORT}`)})
