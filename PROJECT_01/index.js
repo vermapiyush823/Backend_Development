@@ -3,8 +3,23 @@ const users = require('./MOCK_DATA.json')
 const PORT = 3000;
 const app = express();
 const fs = require('fs');
+
 // Middleware
 app.use(express.urlencoded({extended:false}));
+
+app.use((req,res,next)=>{
+    console.log("Hello from M1");
+    next()
+})
+
+app.use((req,res,next)=>{
+    console.log("Hello from M2");
+    next();
+})
+
+
+
+
 // app.get('/users',(req,res)=>{
 //     const html = `
 //     <ul>
@@ -14,7 +29,7 @@ app.use(express.urlencoded({extended:false}));
 //     </ul>
 //     `;
 //     res.send(html);
-// })
+// }) 
 
 // Routes
 app.get('/api/users',(req,res)=>{
@@ -70,6 +85,7 @@ app.post('/api/users',(req,res)=>{
 //     // Delete user 
 //     return res.json({status:'pending'});
 // })
+
 
 
 app.listen(PORT,()=>{console.log(`Server started on port : ${PORT}`)})
