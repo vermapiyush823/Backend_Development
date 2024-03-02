@@ -33,6 +33,8 @@ app.use((req,res,next)=>{
 
 // Routes
 app.get('/api/users',(req,res)=>{
+    res.setHeader("X-name","Piyush");
+
     return res.json(users);
 })
 
