@@ -29,13 +29,12 @@ router
   .delete(deleteUserById);
 
 // app.patch('/api/users/:id',(req,res)=>{
-//     // Update user details
+// Update user details
 //     return res.json({status:'pending'});
 // })
 // app.post('/api/users/:id',(req,res)=>{
-//     // Delete user
+// Delete user
 //     return res.json({status:'pending'});
 // })
-
 
 module.exports = router;
